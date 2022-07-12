@@ -3,7 +3,7 @@ const navSlide = () => {
 	const nav = document.querySelector(".nav-links");
 	const navLinks = document.querySelectorAll(".nav-links li");
 
-	burger.addEventListener("click", () => {
+	burger.onclick = () => {
 		// TOGGLE NAV
 		nav.classList.toggle("nav-active");
 
@@ -20,11 +20,25 @@ const navSlide = () => {
 
 		// BURGER ANIMATION
 		burger.classList.toggle("toggle");
-	});
+	};
 };
+
+const themeSwitch = () => {
+	const icon = document.getElementById('icon');
+
+	icon.addEventListener('click', () => {
+		document.body.classList.toggle('light')
+		if(document.body.classList.contains('light')){
+			icon.src = 'img/moon.png'
+		} else{
+			icon.src = 'img/sun.png'
+		}
+	})
+}
 
 const app = () => {
 	navSlide();
+	themeSwitch();
 };
 
 app();
