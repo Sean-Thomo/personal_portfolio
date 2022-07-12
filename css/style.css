@@ -8,9 +8,9 @@
 	--hover_tint_dark: rgba(100,255,218,0.1);
 
 	/* LIGHT */
-	--background_light: #eff1f3;
-	--paragraph_light: #0a192f;
-	--heading_light: #000;
+	--background_light: #fff;
+	--paragraph_light: #000;
+	--heading_light: #0a192f;
 	--highlight_light: #090C9B;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
 }
@@ -40,7 +40,7 @@
 body{
 	background-color: var(--bg);
 	color: var(--paragraph);
-	/* font-family: 'Poppins', sans-serif; */
+	font-family: 'Poppins', sans-serif;
 	transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
@@ -55,17 +55,12 @@ header {
 	height: 70px;
 }
 
-img{
-	width: 50em;
-	margin-right: auto;
-}
-
 #nav-title {
 	font-family: 'Poppins', sans-serif;
 	letter-spacing: 0.3em;
 	font-size: larger;
 	margin-right: auto;
-	color: var(--highlight);
+	color: var(--heading);
 }
 
 .nav-links {
@@ -92,7 +87,7 @@ img{
 .burger div {
 	width: 25px;
 	height: 3px;
-	background-color: var(--highlight);
+	background-color: var(--heading);
 	margin: 5px;
 	transition: all 0.4s ease;
 }
@@ -120,7 +115,7 @@ img{
 		right: 0;
 		height: 92vh;
 		top: 8vh;
-		background-color: #0a192f;
+		background-color: var(--bg);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
