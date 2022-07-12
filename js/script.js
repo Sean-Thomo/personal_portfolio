@@ -26,14 +26,21 @@ const navSlide = () => {
 const themeSwitch = () => {
 	const icon = document.getElementById('icon');
 
-	icon.addEventListener('click', () => {
+	// const theme = localStorage.getItem('theme');
+
+	// if (theme) {
+	// 	body.classList.add(theme)
+	// }
+
+	icon.onclick = () => {
 		document.body.classList.toggle('light')
+		// localStorage.setItem('theme', document.body.classList)
 		if(document.body.classList.contains('light')){
 			icon.src = 'img/moon.png'
 		} else{
 			icon.src = 'img/sun.png'
 		}
-	})
+	}
 }
 
 const app = () => {

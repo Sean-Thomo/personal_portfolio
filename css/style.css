@@ -2,6 +2,7 @@
 :root{
 	/* DARK */
 	--background_dark: #0a192f;
+	--logo_dark: var(--highlight_dark);
 	--paragraph_dark: #8892b0;
 	--heading_dark: #ccd6f6;
 	--highlight_dark: #64ffda;
@@ -13,10 +14,12 @@
 	--heading_light: #0a192f;
 	--highlight_light: #090C9B;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
+	--logo_light: var(var(--paragraph_light));
 }
 
 .dark{
 	--bg: var(--background_dark);
+	--logo: var(--logo_dark);
 	--paragraph: var(--paragraph_dark);
 	--heading: var(--heading_dark);
 	--highlight: var(--highlight_dark);
@@ -25,6 +28,7 @@
 
 .light{
 	--bg: var(--background_light);
+	--logo: var(--logo_light);
 	--paragraph: var(--paragraph_light);
 	--heading: var(--heading_light);
 	--highlight: var(--highlight_light);
@@ -38,6 +42,7 @@
 }
 
 body{
+	padding: 0 3em;
 	background-color: var(--bg);
 	color: var(--paragraph);
 	font-family: 'Poppins', sans-serif;
@@ -51,7 +56,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1em 3em;
+	padding: 1em 0;
 	height: 70px;
 }
 
@@ -60,7 +65,7 @@ header {
 	letter-spacing: 0.3em;
 	font-size: larger;
 	margin-right: auto;
-	color: var(--heading);
+	color: var(--logo);
 }
 
 .nav-links {
@@ -85,11 +90,24 @@ header {
 }
 
 .burger div {
-	width: 25px;
+	border-radius: 10px;
 	height: 3px;
-	background-color: var(--heading);
+	background-color: var(--logo);
 	margin: 5px;
+	transform: rotate(180deg);
 	transition: all 0.4s ease;
+}
+
+.burger .line1{
+	width: 30px;
+}
+
+.burger .line2{
+	width: 20px;
+}
+
+.burger .line3{
+	width: 10px;
 }
 
 #icon{
@@ -158,4 +176,5 @@ header {
 
 .toggle .line3 {
 	transform: rotate(+45deg) translate(-5px, -6px);
+	width: 30px;
 }
