@@ -14,7 +14,7 @@
 	--heading_light: #0a192f;
 	--highlight_light: #090C9B;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
-	--logo_light: var(var(--paragraph_light));
+	--logo_light: var(--paragraph_light);
 }
 
 .dark{
@@ -115,6 +115,17 @@ header {
 	height: 40px;
 	cursor: pointer;
 	margin: 1em;
+}
+
+/* LANDING SECTION */
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#profile-img{
+	width: 20em;
 }
 
 @media screen and (max-width: 768px) {
