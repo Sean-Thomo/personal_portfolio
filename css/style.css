@@ -12,7 +12,7 @@
 	--background_light: #fff;
 	--paragraph_light: #000;
 	--heading_light: #0a192f;
-	--highlight_light: #090C9B;
+	--highlight_light: #000;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
 	--logo_light: var(--paragraph_light);
 }
@@ -57,13 +57,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	padding: 1em 0;
-	height: 70px;
+	height: 5em;
 }
 
 #nav-title {
-	font-family: 'Poppins', sans-serif;
-	letter-spacing: 0.3em;
+	/* font-family: 'Poppins', sans-serif; */
+	letter-spacing: 0.2em;
 	font-size: larger;
+	font-weight: 100;
 	margin-right: auto;
 	color: var(--logo);
 }
@@ -76,7 +77,7 @@ header {
 
 .nav-links li {
 	list-style: none;
-	padding: 1em;
+	padding: 0.9em;
 }
 
 .nav-links a {
@@ -110,22 +111,41 @@ header {
 	width: 10px;
 }
 
+.nav-links li:hover{
+	border-top: 0px;
+	border-bottom: 0;
+	border-radius: 2em;
+	border: 3px solid var(--highlight);
+}
+
 #icon{
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
-	margin: 1em;
+}
+
+.nav-links li #icon:hover{
+	border: 0px;
 }
 
 /* LANDING SECTION */
 .row{
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
+.row h1{
+	color: var(--heading);
+}
+
 #profile-img{
-	width: 20em;
+	width: 18em;
+	right: 1em;
+}
+
+#blob{
+	z-index: -1;
 }
 
 @media screen and (max-width: 768px) {
