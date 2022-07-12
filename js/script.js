@@ -25,6 +25,7 @@ const navSlide = () => {
 
 const themeSwitch = () => {
 	const icon = document.getElementById('icon');
+	const blob = document.getElementById('blob');
 
 	// const theme = localStorage.getItem('theme');
 
@@ -36,9 +37,11 @@ const themeSwitch = () => {
 		document.body.classList.toggle('light')
 		// localStorage.setItem('theme', document.body.classList)
 		if(document.body.classList.contains('light')){
-			icon.src = 'img/moon.png'
+			icon.src = 'img/moon.png';
+			blob.src = 'img/blob_light_2.png';
 		} else{
-			icon.src = 'img/sun.png'
+			icon.src = 'img/sun.png';
+			blob.src = 'img/blob_dark.png';
 		}
 	}
 }
