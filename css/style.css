@@ -155,14 +155,13 @@ main{
 	content: "";
 	display: block;
 	width: 150px;
-	background-color: var(--highlight);
-	border: 2px solid var(--highlight);
+	border: 1px solid var(--highlight);
 	border-radius: 2em;
 	margin: 1em 0;
 }
 
-.hero a{
-	background: var(--hover-tint);
+.btn{
+	background-color: var(--hover-tint);
 	padding: 1em 3em;
 	border-radius: 2em;
 	color: var(--highlight);
@@ -184,6 +183,67 @@ figure img{
 	width: 300px;
 }
 
+/* OVERLAPPING PROJECT LAYOUT */
+.projects{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.projects a{
+	text-decoration: none;
+	color: var(--heading);
+}
+
+#project-heading{
+	font-size: 2.4em;
+	font-weight: 780;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 1em;
+	width: 100%;
+	text-decoration: underline;
+
+}
+
+#project-heading::after{
+	content: "";
+	border: 1px solid var(--hover-tint);
+	display: flex;
+	margin: 1em;
+	width: 10em;
+}
+
+.projects .container{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.left{
+	width: 60%;
+	height: 600px;
+	border-radius: 1em;
+}
+
+.right{
+	width: 50%;
+	min-height: 400px;
+	background-color: #112240;
+	color: white;
+	border-radius: 1em;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: -10em;
+}
+
 @media screen and (max-width: 768px) {
 	body {
 		overflow-x: hidden;
@@ -191,7 +251,7 @@ figure img{
 	}
 
 	main{
-		flex-flow: column-reverse;
+		flex-flow: column;
 	}
 
 	.hero{
