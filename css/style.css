@@ -95,7 +95,7 @@ header {
 	height: 3px;
 	background-color: var(--logo);
 	margin: 5px;
-	transform: rotate(180deg);
+	transform: rotate(45deg);
 	transition: all 0.4s ease;
 }
 
@@ -112,10 +112,9 @@ header {
 }
 
 .nav-links li:hover{
-	border-top: 0px;
-	border-bottom: 0;
-	border-radius: 2em;
-	border: 3px solid var(--highlight);
+	background: var(--hover-tint);
+	border-radius: 3em;
+	color: var(--highlight);
 }
 
 #icon{
@@ -124,40 +123,90 @@ header {
 	cursor: pointer;
 }
 
-
 /* LANDING SECTION */
-.row{
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2em 1em;
 }
 
 main{
-	height: 1vh;
+	display: flex;
+	flex-flow: row;
 }
 
-.row h1{
-	color: var(--heading);
+.hero{
+	height: 100vh;
+	margin: auto 0;
 }
 
-#profile-img{
-	width: 18em;
-	right: 1em;
+.hero h1{
+	font-size: 4em;
+	font-weight: 780;
 }
 
-#blob{
-	z-index: -1;
+.hero p{
+	font-size: 1.3em;
+	margin: 0 0 3em 0;
 }
 
-@media screen and (max-width: 768px) {
-	.nav-links {
-		width: 40%;
-	}
+.hero p::before{
+	content: "";
+	display: block;
+	width: 150px;
+	border: 3px solid var(--highlight);
+	border-radius: 1em;
+	margin: 1em 0;
+}
+
+.hero a{
+	background: var(--hover-tint);
+	padding: 1em 3em;
+	border-radius: 50px;
+	color: var(--highlight);
+	text-decoration: none;
+	font-size: 1.37em;
+	font-weight: 680;
+}
+
+figure {
+	text-align: center;
+}
+
+figure img{
+	justify-content: space-around;
+	width: 300px;
+	/* margin-left: 5em; */
 }
 
 @media screen and (max-width: 768px) {
 	body {
 		overflow-x: hidden;
+		padding: 0 1em;
+	}
+
+	main{
+		flex-flow: column-reverse;
+	}
+
+	.hero{
+		text-align: center;
+	}
+
+	.hero h1{
+		font-size: 2.5em;
+	}
+
+	.hero p{
+		font-size: 1.2em;
+		font-weight: 680;
+		max-width: 580px;
+		line-height: 1.8em;
+		margin: 3em auto;
+	}
+
+	.hero p::before{
+		margin: 1em auto;
 	}
 
 	.nav-links {
@@ -172,6 +221,7 @@ main{
 		width: 70%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
+		overflow: hidden;
 	}
 
 	.nav-links li {
