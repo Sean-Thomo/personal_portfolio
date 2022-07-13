@@ -124,15 +124,16 @@ header {
 	cursor: pointer;
 }
 
-.nav-links li #icon:hover{
-	border: 0px;
-}
 
 /* LANDING SECTION */
 .row{
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+main{
+	height: 1vh;
 }
 
 .row h1{
