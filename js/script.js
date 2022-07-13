@@ -38,10 +38,10 @@ const themeSwitch = () => {
 		// localStorage.setItem('theme', document.body.classList)
 		if(document.body.classList.contains('light')){
 			icon.src = 'img/moon.png';
-			blob.src = 'img/blob_light_2.png';
+			blob.src = "img/blob_light_2.png";
 		} else{
 			icon.src = 'img/sun.png';
-			blob.src = 'img/blob_dark.png';
+			blob.src = "img/blob_dark.png";
 		}
 	}
 }
