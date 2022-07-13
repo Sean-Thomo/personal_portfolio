@@ -193,7 +193,6 @@ figure img{
 }
 
 .projects a{
-	text-decoration: none;
 	color: var(--heading);
 }
 
@@ -221,6 +220,7 @@ figure img{
 	width: 90%;
 	max-width: 1000px;
 	margin: 0 auto;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -241,7 +241,6 @@ figure img{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-left: -10em;
 }
 
 @media screen and (max-width: 768px) {
