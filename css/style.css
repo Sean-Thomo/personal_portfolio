@@ -185,6 +185,12 @@ figure img{
 	width: 300px;
 }
 
+/* ABOUT ME */
+.content{
+	padding: 2em;
+	font-size: 1.2em;
+}
+
 /* OVERLAPPING PROJECT LAYOUT */
 .section-heading{
 	display: flex;
@@ -327,6 +333,10 @@ figure img{
 
 .nav-active {
 	transform: translateX(0%);
+}
+
+.blur{
+	filter: blur(4px);
 }
 
 .toggle .line1 {

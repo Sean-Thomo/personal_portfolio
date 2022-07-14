@@ -2,11 +2,12 @@ const navSlide = () => {
 	const burger = document.querySelector(".burger");
 	const nav = document.querySelector(".nav-links");
 	const navLinks = document.querySelectorAll(".nav-links li");
+	// const body = document.querySelector('.hide')
 
 	burger.onclick = () => {
 		// TOGGLE NAV
 		nav.classList.toggle("nav-active");
-
+		// body.classList.toggle("blur")
 		// ANIMATE LINKS
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {
@@ -25,7 +26,7 @@ const navSlide = () => {
 
 const themeSwitch = () => {
 	const icon = document.getElementById('icon');
-	const blob = document.getElementById('blob');
+	const profile_image = document.getElementById('profile-image');
 
 	// const theme = localStorage.getItem('theme');
 
@@ -38,10 +39,10 @@ const themeSwitch = () => {
 		// localStorage.setItem('theme', document.body.classList)
 		if(document.body.classList.contains('light')){
 			icon.src = 'img/moon.png';
-			blob.src = "img/blob_light_2.png";
+			profile_image.src = "img/blob_light_2.png";
 		} else{
 			icon.src = 'img/sun.png';
-			blob.src = "img/blob_dark.png";
+			profile_image.src = "img/blob_dark.png";
 		}
 	}
 }
