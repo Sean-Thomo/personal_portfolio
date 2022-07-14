@@ -234,7 +234,7 @@ figure img{
 .right{
 	width: 50%;
 	min-height: 400px;
-	background-color: #112240;
+	background-color: var(--hover-tint);
 	color: white;
 	border-radius: 1em;
 	padding: 1em;
