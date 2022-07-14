@@ -7,6 +7,7 @@
 	--heading_dark: #ccd6f6;
 	--highlight_dark: #64ffda;
 	--hover_tint_dark: rgba(100,255,218,0.1);
+	--description_dark :#112240;
 
 	/* LIGHT */
 	--background_light: #fff;
@@ -15,6 +16,7 @@
 	--highlight_light: #000;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
 	--logo_light: var(--paragraph_light);
+	--description_light :#404040;
 }
 
 .dark{
@@ -24,7 +26,7 @@
 	--heading: var(--heading_dark);
 	--highlight: var(--highlight_dark);
 	--hover-tint: var(--hover_tint_dark);
-	--description: #112240;
+	--description: var(--description_dark);
 }
 
 .light{
@@ -34,7 +36,7 @@
 	--heading: var(--heading_light);
 	--highlight: var(--highlight_light);
 	--hover-tint: var(--hover_tint_light);
-	--description: #112240;
+	--description: var(--description_light);
 }
 
 * {
@@ -128,7 +130,7 @@ header {
 
 /* LANDING SECTION */
 .container{
-	max-width: 1200px;
+	max-width: 65em;
 	margin: 0 auto;
 	padding: 2em 1em;
 }
@@ -198,17 +200,22 @@ figure img{
 	align-items: center;
 }
 
+.projects,
+.about {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
 .project-display{
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	/* align-items: center;
-	justify-content: center; */
+	grid-template-columns: repeat(12, 1fr);
+	align-items: center;
 	margin: 5em 0;
 }
 
 .project-image{
-	grid-column: 1 / 3;
+	grid-column: 1 / 9;
 }
 
 .project-image,
@@ -217,27 +224,27 @@ figure img{
 }
 
 .project-display a{
-	color: var(--heading);
+	color: inherit;
 }
 
 .projects img{
-	width: 120%;
+	width: 100%;
 	height: auto;
 	border-radius: 1em;
 	grid-column: 1 / 3;
-
 }
 
 .project-description{
 	background-color: var(--description);
-	color: white;
-	border-radius: 1em;
-	padding: 1em;
-	grid-column: 2 / -1;
-	align-self: center;
-	/* display: flex;
+	display: flex;
+	/* justify-content: center; */
 	align-items: center;
-	justify-content: center; */
+	min-height: 15em;
+	color: white;
+	font-size: 0.7em;
+	border-radius: 1em;
+	padding: 0.1em;
+	grid-column: 5 / -1;
 }
 
 .project-description a{
@@ -325,9 +332,9 @@ figure img{
 		margin: 1em auto;
 	}
 
-	/* .project-image img{
-		visibility: hidden;
-	} */
+	.project-display .project-image{
+		grid-area: 1 /6 / -1/ -1;
+	}
 
 	.project-display{
 		display: block;
