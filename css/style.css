@@ -7,7 +7,7 @@
 	--heading_dark: #ccd6f6;
 	--highlight_dark: #64ffda;
 	--hover_tint_dark: rgba(100,255,218,0.1);
-	--description_dark :#112240;
+	--description_dark :rgba(17, 34, 64, 0.8);
 
 	/* LIGHT */
 	--background_light: #fff;
@@ -16,7 +16,7 @@
 	--highlight_light: #000;
 	--hover_tint_light: rgba(100, 118, 255, 0.1);
 	--logo_light: var(--paragraph_light);
-	--description_light :#404040;
+	--description_light :rgba(64, 64, 64, 0.8);
 }
 
 .dark{
@@ -166,7 +166,7 @@ main{
 
 .btn{
 	background-color: var(--hover-tint);
-	padding: 1em 3em;
+	padding: 0.9em 2.5em;
 	border-radius: 2em;
 	color: var(--highlight);
 	text-decoration: none;
@@ -237,7 +237,6 @@ figure img{
 .project-description{
 	background-color: var(--description);
 	display: flex;
-	/* justify-content: center; */
 	align-items: center;
 	min-height: 15em;
 	color: white;
@@ -254,6 +253,73 @@ figure img{
 .project-description a:hover{
 	text-decoration: underline;
 	color: var(--highlight);
+}
+
+/* CONTACT */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contact {
+	padding-bottom: 3%;
+}
+
+.contact-form,
+.contact-info {
+	width: 50%;
+	padding: 0 15px;
+}
+
+.contact-form .input-group {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.input-control {
+	height: 4em;
+	width: 100%;
+	border-radius: 2em;
+	border: none;
+	font-family: inherit;
+	font-weight: 400;
+	padding: 0 1em;
+	color: var(--highlight);
+}
+
+/* .input-control:focus {
+	border-color: red;
+} */
+
+.input-group textarea {
+	color: var(--highlight);
+	height: 10em;
+	resize: none;
+	padding: 1em;
+}
+
+.fa {
+	color: var(--highlight);
+	padding: 0 2%;
+}
+
+.fa:hover {
+	color: var(--hover-tint);
+	cursor: pointer;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--highlight);
+	border-radius: 1em;
 }
 
 @media screen and (min-width: 770px) {
@@ -333,11 +399,16 @@ figure img{
 	}
 
 	.project-display .project-image{
-		grid-area: 1 /6 / -1/ -1;
+		grid-area: 1 / 6 / -1/ -1;
 	}
 
 	.project-display{
-		display: block;
+		grid-template-columns: none;
+		align-items: initial;
+	}
+
+	.project-description{
+		grid-column: -inherit/ 6;
 	}
 }
 
