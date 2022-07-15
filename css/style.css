@@ -77,6 +77,7 @@ header {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	overflow-x: hidden;
 }
 
 .nav-links li {
@@ -135,7 +136,7 @@ header {
 	padding: 2em 1em;
 }
 
-main{
+.flex{
 	display: flex;
 	flex-flow: row;
 }
@@ -256,24 +257,17 @@ figure img{
 }
 
 /* CONTACT */
-.row {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.contact {
-	padding-bottom: 3%;
-}
-
 .contact-form,
 .contact-info {
-	width: 50%;
-	padding: 0 15px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.contact-form .input-group {
+ .input-group {
 	width: 100%;
-	margin-bottom: 30px;
+	margin:2em 0;
 }
 
 .input-control {
@@ -287,10 +281,6 @@ figure img{
 	color: var(--highlight);
 }
 
-/* .input-control:focus {
-	border-color: red;
-} */
-
 .input-group textarea {
 	color: var(--highlight);
 	height: 10em;
@@ -298,6 +288,9 @@ figure img{
 	padding: 1em;
 }
 
+.social-links a:hover{
+	border: none;
+}
 .fa {
 	color: var(--highlight);
 	padding: 0 2%;
@@ -345,18 +338,13 @@ figure img{
 
 @media screen and (max-width: 768px) {
 	body {
-		overflow-x: hidden;
 		padding: 0 1em;
-	}
-
-	html{
-		overflow-x: hidden;
 	}
 
 	.nav-links {
 		position: absolute;
 		right: 0;
-		height: 92vh;
+		height: 100vh;
 		top: 8vh;
 		background-color: var(--bg);
 		display: flex;
@@ -365,6 +353,7 @@ figure img{
 		width: 70%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
+		overflow: hidden;
 	}
 
 	.nav-links li {
@@ -375,8 +364,9 @@ figure img{
 		display: block;
 	}
 
-	main{
+	.flex{
 		flex-flow: column;
+		width: 100%;
 	}
 
 	.hero{
