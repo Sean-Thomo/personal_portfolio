@@ -2,12 +2,10 @@ const navSlide = () => {
 	const burger = document.querySelector(".burger");
 	const nav = document.querySelector(".nav-links");
 	const navLinks = document.querySelectorAll(".nav-links li");
-	// const body = document.querySelector('.hide')
 
 	burger.onclick = () => {
 		// TOGGLE NAV
 		nav.classList.toggle("nav-active");
-		// body.classList.toggle("blur")
 		// ANIMATE LINKS
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {
@@ -24,19 +22,24 @@ const navSlide = () => {
 	};
 };
 
+const emojiTop = () => {
+	const emoji = document.getElementsById('emoji');
+	const sticky = emoji.offsetTop;
+	window.onscroll = () => {
+		if (window.pageYOffset >= sticky) {
+			emoji.classList.add("emoji")
+		} else {
+			navbar.classList.remove("emoji")
+		}
+	}
+}
+
 const themeSwitch = () => {
 	const icon = document.getElementById('icon');
 	const profile_image = document.getElementById('profile-image');
 
-	// const theme = localStorage.getItem('theme');
-
-	// if (theme) {
-	// 	body.classList.add(theme)
-	// }
-
 	icon.onclick = () => {
 		document.body.classList.toggle('light')
-		// localStorage.setItem('theme', document.body.classList)
 		if(document.body.classList.contains('light')){
 			icon.src = 'img/moon.png';
 			profile_image.src = "img/blob_light_2.png";
@@ -50,6 +53,7 @@ const themeSwitch = () => {
 const app = () => {
 	navSlide();
 	themeSwitch();
+	emojiTop()
 };
 
 app();
