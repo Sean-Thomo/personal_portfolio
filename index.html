@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,width=device-width" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Siphesihle Thomo</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/script.js"></script>
 </head>
 <body class="dark">
-  <header>
+  <header >
     <h1 id="nav-title">&lt;/S34N&gt;</h1>
     <nav>
       <ul class="nav-links">
@@ -28,7 +29,7 @@
     </nav>
   </header>
 
-  <main id="hero" class="flex container">
+  <main id="hero" class="flex-row flex container">
     <section class="hero">
       <h1>Hey, There</h1>
       <h1>I&rsquo;m Sean</h1>
@@ -44,7 +45,7 @@
   </main>
 
   <section class="about">
-    <h1 id="about-me" class="section-heading">About me</h1>
+    <h1 id="about-me" class="flex">About me</h1>
     <div class="content">
       <p>
         Hello &#128075; my name is Siphesihle i&rsquo;m a software developer 
@@ -57,7 +58,7 @@
   </section>
 
   <section>
-    <h1 id="project-heading" class="section-heading">Projects</h1>
+    <h1 id="project-heading" class="flex">Projects</h1>
     <div class="projects">
       <div class="container">
 
@@ -65,7 +66,7 @@
           <div class="project-image">
             <img src="img/netflix_clone.png" alt="netflix Clone">
           </div>
-          <div class="project-description">
+          <div class="project-description flex">
             <div class="content">
               <h1><a href="#">Netflix Clone</a></h1>
               <p>Netflix clone built mainly with solidify and react. Used MovieDB as data source.</p>
@@ -77,7 +78,7 @@
           <div class="project-image">
             <img src="img/keeper_clone.png" alt="google keep clone">
           </div>
-          <div class="project-description">
+          <div class="project-description flex">
             <div class="content">
               <h1><a href="#">Google Keep Clone</a></h1>
               <p>To-Do lists are boring now, so I built a google keep clone with react to demonstrate the same skill.</p>
@@ -89,7 +90,7 @@
           <div class="project-image">
             <img src="img/secrets_login.png" alt="secrets login app">
           </div>
-          <div class="project-description">
+          <div class="project-description flex">
             <div class="content">
               <h1><a href="#">Secrets Login App</a></h1>
               <p>A web app built to make use of Oauth and handling login using popular platforms APIs like google and facebook OAuth</p>
@@ -103,18 +104,20 @@
 
   <section class="container">
     <div>
-      <h1 class="section-heading">Contact Me</h1>
+      <h1 class="flex">Contact Me</h1>
     </div>
 
-    <div class="flex">
+    <div class="flex-row flex">
       <div class="contact-form hero">
-        <form action="https://formsubmit.com/seansthomo@gmail.com" method="post">
+        <form action="https://formsubmit.co/seansthomo@gmail.com" method="POST">
           <div class="row">
             <div class="input-group">
+              <input type="hidden" name="_captcha" value="false">
               <input
                 type="text"
                 class="input-control"
                 placeholder="Name"
+                name="name"
                 required
               />
             </div>
@@ -123,6 +126,7 @@
                 type="email"
                 class="input-control"
                 placeholder="Email"
+                name="email"
                 required
               />
             </div>
@@ -131,6 +135,7 @@
                 type="text"
                 class="input-control"
                 placeholder="Subject"
+                name="subject"
               />
             </div>
             <div class="input-group">
@@ -138,12 +143,11 @@
                 type="text"
                 class="input-control"
                 placeholder="Message"
+                name="textarea"
                 required
               ></textarea>
             </div>
-            <div class="submit-btn">
-              <a class="btn" type="submit">Submit</a>
-            </div>
+            <button class="btn" type="submit">Submit</button>
           </div>
         </form>
       </div>
