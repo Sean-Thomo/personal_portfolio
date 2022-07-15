@@ -315,6 +315,7 @@ figure img {
 
 .fa  {
 	color: var(--highlight);
+	padding: 0.5em 0.5em 0 0;
 }
 
 .fa:hover  {
